@@ -1,30 +1,29 @@
 # Md. Rasel Uddin — academic portfolio
 
-A responsive static website for GitHub Pages. No installation or build required.
+A static website for GitHub Pages (https://md-rasel-uddin.github.io/). It needs no installation or build step.
 
-## Preview
-Open index.html in a browser.
-
-## Publish on GitHub Pages
-1. Create a public repository named YOUR-USERNAME.github.io, replacing YOUR-USERNAME with your actual GitHub username.
-2. Upload index.html, style.css, favicon.svg and .nojekyll to the repository root. Upload the files themselves, rather than this enclosing folder or ZIP.
-3. Open Settings → Pages. Under Build and deployment select Deploy from a branch, main, and /(root), then Save.
-4. GitHub will display the published website link on the Pages settings screen once deployment finishes.
-
-You can also use an existing repository. Relative asset paths work on project Pages sites.
-
-## Update
-Edit the text in index.html and the design in style.css, then commit to main.
-
-## Content notes
-Content is grounded in Md-Rasel-Uddin-CV(1).pdf, dated 10 September 2026, and the existing public website. Current manuscript status should be confirmed before publication. Publication titles follow the shortened citations in that CV. No content from similarly named researchers has been used.
-
-The existing site's Google Scholar, LinkedIn and Kaggle destinations are retained. GitHub and ResearchGate buttons and a CV download are omitted until the exact profile URLs and a public-safe CV are provided. A portrait can be added when a suitable photograph is selected. The CV was not copied into this website because it includes private details and referee contact information.
+It brings together the demo design and all the content from the old Google Site (https://sites.google.com/view/mdraseluddin): Home, About, Research, Project/Code, Selected Works, Recognition of Achievement and Contact.
 
 ## Files
-- index.html: content and layout
-- style.css: responsive styling
-- favicon.svg: site icon
-- .nojekyll: serve the static files directly
+- `index.html`: main page (About, Research, Publications, Selected Works, Projects, Experience & Education, Honors & Training, Leadership, Contact)
+- `gallery.html`: photo gallery with captions and a click-to-enlarge viewer
+- `style.css`: all styling, including responsive layout and dark mode
+- `site.js`: mobile menu, dark-mode toggle, active-section highlight and gallery viewer
+- `assets/img/`: photos, figures and project screenshots, resized from the old site
+- `favicon.svg`, `.nojekyll`
 
-Hosting documentation: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+## Preview locally
+Open `index.html` in a browser, or run `python -m http.server` in this folder and open http://localhost:8000.
+
+## Publish
+Upload **the contents of this folder** (not the folder itself) to the root of the `md-rasel-uddin.github.io` repository, replacing the old `index.html` and `style.css`. Make sure the `assets` folder and `site.js` are included. GitHub Pages redeploys in about a minute.
+
+## Updating content
+- New publication: copy one `<div class="pub">…</div>` block in `index.html` under `#publications`.
+- New gallery photo: put the image in `assets/img/` and copy one `<figure>` line in `gallery.html`.
+- CV: the "Curriculum Vitae" button links to the Google Drive CV used on the old site (dated March 2025). Replace that link when a newer public CV is ready.
+- Certificates link to the original Google Drive scans used on the old site.
+
+## Content notes
+- The TL-MED DOI was confirmed through Crossref.
+- The UITS student email and the embedded Google Map from the old Contact page were left out as outdated or unnecessary. The Facebook link was left out as personal.
